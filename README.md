@@ -4,11 +4,11 @@ This project demonstrates how to deploy a secure website using a serverless fram
 The website includes functionalities for user authentication, file uploads, and storing data in a database, all implemented with AWS serverless services for a minimal cost and maintenance.
 
 Services used (so far): 
-   - API Gateway, 
-    - Lambda, 
-    - S3, 
-    - DynamoDB,
-    - Cognito.
+   - API Gateway
+   - Lambda
+   - S3
+   - DynamoDB
+   - Cognito
 
 ## 1. Project Overview
 ### 1.1. Goal
