@@ -1,0 +1,39 @@
+# version: '3.7'
+# services:
+#   frontend:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     volumes:
+#       - /app/node_modules
+#       - ./:/app
+#     working_dir: /app
+#     command: npm run dev -- --mode production
+#     ports:
+#       - "8080:8080"
+#     restart: on-failure
+#     environment:
+#       - NODE_ENV=production
+
+
+# version: '3.8'
+
+# services:
+#   web:
+#     build: .
+#     ports:
+#       - "8080:80" 
+
+
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"  # Maps port 80 of the container to port 8080 on the host
+    volumes:
+      - .:/app  # Optionally mount your local directory for development
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80

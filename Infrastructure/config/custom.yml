@@ -1,0 +1,3 @@
+stage: ${self:provider.stage}
+pythonRequirements:
+  layer: true # Package dependencies as a Lambda layer

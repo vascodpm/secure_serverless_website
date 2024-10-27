@@ -1,0 +1,22 @@
+LambdaListHotel:
+  handler: functions.listHotel.handler.handler
+  role: LambdaRole
+  events:
+    - http:
+        path: listHotel
+        method: GET
+        cors:
+          origin: '*' # Replace '*' with specific origin if needed
+          allowHeaders:
+            - Authorization
+            - Content-Type
+        authorizer:
+          type: COGNITO_USER_POOLS
+          authorizerId:
+            Ref: ApiGatewayAuthorizer
+  environment:
+    bucketName: !Ref HotelBookingBucket
+    dynamodb: !Ref DynamoDBTable
+    REGION: ${self:provider.region}
+  layers:
+    - { Ref: PythonRequirementsLambdaLayer }

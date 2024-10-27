@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "![Microservices with Python and AWS ](https://img-b.udemycdn.com/course/750x422/5295272_c99f_5.jpg \"Microservices with Python and AWS\")",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,4 @@
+name: aws
+runtime: python3.10
+region: eu-central-1
+stage: ${opt:stage, 'dev'}

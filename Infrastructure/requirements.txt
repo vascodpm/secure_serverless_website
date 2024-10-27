@@ -1,0 +1,5 @@
+python-multipart==0.0.6
+cffi
+pycparser
+cryptography==41.0.1
+PyJWT==2.8.0

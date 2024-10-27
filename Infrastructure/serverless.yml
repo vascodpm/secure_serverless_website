@@ -1,0 +1,16 @@
+org: vascodpm
+app: hotel-booking
+service: hotel-booking
+
+# Load separate configuration files
+provider: ${file(./config/provider.yml)}
+custom: ${file(./config/custom.yml)}
+
+functions:
+  - ${file(functions/addHotel/serverless-functions.yml)}
+  - ${file(functions/listHotel/serverless-functions.yml)}
+
+resources: ${file(./resources/serverless-resources.yml)}
+
+plugins:
+  - serverless-python-requirements
